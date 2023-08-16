@@ -1,5 +1,5 @@
 {% set name = "compass" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://github.com/opera-adt/COMPASS/archive/v{{ version }}.tar.gz
-  sha256: df2ef6921f042d25f5848242f13dbb3fb0be0c882bbef691f3cb92ee3d3f1f69
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
 build:
   entry_points:
     - s1_cslc.py = compass.s1_cslc:main
     - s1_geocode_stack.py = compass.s1_geocode_stack:main
+    - s1_static_layers.py = compass.s1_static_layers:main
     - validate_product.py = compass.utils.validate_product:main
   noarch: python
   script:
@@ -28,18 +29,19 @@ requirements:
     - python >=3.8
     - numpy >=1.20
     - gdal >=3.3
+    - h5py >=3.5
     - isce3 >=0.14.0
     - pandas >=1.4
     - pyproj >=3.3
     - pillow >=7.0
     - pysolid >=0.3
-    - ruamel.yaml >=0.15
-    - scipy >=1.0,<1.13
-    - yamale >=4.0
-    - h5py >=3.5
-    - shapely >=1.8
-    - s1reader >=0.2.0
     - requests >=2.0
+    - ruamel.yaml >=0.15
+    - s1reader >=0.2.0
+    - scipy >=1.0,<1.13
+    - shapely >=1.8
+    - yamale >=4.0
+    
 
 test:
   imports:
