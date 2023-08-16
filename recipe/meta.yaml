@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/opera-adt/COMPASS/archive/v{{ version }}.tar.gz
-  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  sha256: c95941361f56b53a0fc3b146f0e9ce6013e6ae197956060b0542e5930ceb98dd
 
 build:
   entry_points:
