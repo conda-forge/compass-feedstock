@@ -18,7 +18,7 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -39,6 +39,7 @@ requirements:
     - ruamel.yaml >=0.15
     - s1reader >=0.2.0
     - scipy >=1.0,<1.13
+    - scikit-image >=0.19
     - shapely >=1.8
     - yamale >=4.0
     
@@ -46,6 +47,9 @@ requirements:
 test:
   imports:
     - compass
+    - compass.s1_geocode_slc
+    - compass.s1_static_layers
+    - compass.utils.lut
   commands:
     - pip check
     - s1_cslc.py --help
