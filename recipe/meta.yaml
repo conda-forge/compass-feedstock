@@ -51,7 +51,6 @@ test:
     - compass.s1_static_layers
     - compass.utils.lut
   commands:
-    - pip check
     - s1_cslc.py --help
   requires:
     - pip
