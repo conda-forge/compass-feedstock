@@ -1,5 +1,5 @@
 {% set name = "compass" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/opera-adt/COMPASS/archive/v{{ version }}.tar.gz
-  sha256: c95941361f56b53a0fc3b146f0e9ce6013e6ae197956060b0542e5930ceb98dd
+  sha256: fa8443187f0f461cf4de4509d507a7a1f600700da9f1b2fb65fe96940d4c4e8d
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -42,7 +42,7 @@ requirements:
     - scikit-image >=0.19
     - shapely >=1.8
     - yamale >=4.0
-    
+
 
 test:
   imports:
