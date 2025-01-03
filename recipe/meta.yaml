@@ -18,15 +18,15 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=64.0
     - pip >=21.3
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.20
     - gdal >=3.3
     - h5py >=3.5
@@ -54,6 +54,7 @@ test:
     - s1_cslc.py --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/opera-adt/COMPASS
