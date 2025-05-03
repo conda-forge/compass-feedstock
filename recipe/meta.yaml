@@ -1,5 +1,5 @@
 {% set name = "compass" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/opera-adt/COMPASS/archive/v{{ version }}.tar.gz
-  sha256: 9b57eb1fe41b775e2111dae9eb62cd0e244bf5f93e036a4e881e0152ddb04ce0
+  sha256: 79ccc0d3a8ecba9506a99791a48b5e05912950fc4cd2e32a32ed5ce302460f32
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
